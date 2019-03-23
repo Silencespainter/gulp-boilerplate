@@ -17,17 +17,13 @@ npm install
 npm start
 ```
 
-* Write code in the `src`-folder.
-
-
 ## Folder structure
 
-* `dist` - The converted files that are linked via `index.html`. You don't have to touch these files
-    - `js` - All converted `js`-files go here
-    - `css` - All converted `css`-files go here
-* `src` - This is where your development-files are. There are the ones you work on
-    - `js` - All unconverted `js`-files
-    - `scss` - All unconverted `scss`-files
+* `statics` - The converted files that are linked via `index.html`. You don't have to touch these files
+    - Converted `js`-file - script.min.js
+    - Converted `css`-file - style.min.css
+* `js` - This is where your development-files are. All unconverted `js`-files
+* `scss` - This is where your development-files are. All unconverted `scss`-files
 * `Gulpfile.js` - This config file must be in the root-folder
 * `index.html` - The index must be in the root-folder
 * `package.json` - All the dependencies and config for the project
