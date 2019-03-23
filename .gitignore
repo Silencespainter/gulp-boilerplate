@@ -1,0 +1,4 @@
+node_modules/.staging/@babel/core-f53e7725/LICENSE
+node_modules
+statics/*.*
+package-lock.json

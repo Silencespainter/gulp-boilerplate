@@ -1,12 +1,12 @@
 {
   "name": "gulp-boilerplate",
   "version": "1.1.0",
-  "description": "Gulp boilerplate with browserify and sass",
-  "main": "main.js",
+  "description": "FORK form Jesper Orb - Gulp boilerplate with browserify and sass",
+  "main": "script.js",
   "scripts": {
     "start": "gulp"
   },
-  "author": "Jesper Orb",
+  "author": "Nando Munoz",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.1.6",
@@ -23,5 +23,13 @@
     "gulp-sass": "^4.0.2",
     "gulp-util": "^3.0.8",
     "vinyl-source-stream": "^2.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Silencespainter/gulp-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Silencespainter/gulp-boilerplate/issues"
+  },
+  "homepage": "https://github.com/Silencespainter/gulp-boilerplate#readme"
 }

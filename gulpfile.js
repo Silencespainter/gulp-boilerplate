@@ -24,31 +24,32 @@ gulp.task('default', ['sass', 'babel'], () => {
         }
     });
     gulp.watch("./*.html").on('change', browserSync.reload);
-    gulp.watch('./src/scss/**/*.scss', ['sass']);
-    gulp.watch('./src/js/*.js', ['babel']);
+    gulp.watch('./scss/**/*.scss', ['sass']);
+    gulp.watch('./js/*.js', ['babel']);
 });
 
 gulp.task('sass', () => {
     const plugins = [autoprefixer({browsers: ['last 2 versions']}), cssnano()];
-    return gulp.src('./src/scss/**/*.scss')
+    return gulp.src('./scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss(plugins))
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('./dist/css'))
+        .pipe(gulp.dest('./statics'))
         .pipe(browserSync.stream());
 });
 
 
 gulp.task('babel', function() {
     browserify({
-        entries: './src/js/main.js',
+        entries: './js/script.js',
         debug: true
     })
     .transform(babelify, { presets: ['env'] })
     .on('error',gutil.log)
     .bundle()
     .on('error',gutil.log)
-    .pipe(source('bundle.js'))
-    .pipe(gulp.dest('dist/js'))
+    .pipe(source('script.js'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest('statics'))
     .pipe(browserSync.stream());
 });
